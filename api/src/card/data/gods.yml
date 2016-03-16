@@ -1,0 +1,32 @@
+- Name: "Son of Jhova"
+  AttackPower: 10
+  Armor: 12
+  Lifeforce: 30
+  Tags:
+    - god
+    - devinity
+  TraitExps:
+    - Exp: spirit_producer:ally:3
+      Targets: personaility
+      Name: Swing
+      Description:
+    - Exp: consume:2 | damage:4
+      Targets: personaility
+      Name: Swing
+      Description:
+- Name: "Dragon Khan"
+  AttackPower: 0
+  Armor: 6
+  Lifeforce: 14
+  Tags:
+    - god
+    - devinity
+  TraitExps:
+    - Exp: spirit_producer:ally:4
+      Targets: personaility
+      Name: Swing
+      Description:
+    - Exp: consume:2 | pick:enemy
+      Targets: personaility
+      Name: Swing
+      Description:

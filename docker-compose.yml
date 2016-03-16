@@ -1,0 +1,7 @@
+www:
+  image: nginx:1.9.11
+  volumes:
+    - ./www/bin/dev:/usr/share/nginx/html:ro
+  ports:
+    - 80:80
+    - 443:443
