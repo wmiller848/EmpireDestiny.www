@@ -1,0 +1,4 @@
+www_build:
+  build: ./
+  # volumes:
+  #   - ./bin:/opt/empire.www/bin
