@@ -35,4 +35,4 @@ ADD ./ /opt/empire.www
 RUN gulp
 VOLUME /opt/empire.www
 
-CMD gulp watch
+CMD gulp

@@ -2,3 +2,4 @@ bin/
 .DS_Store
 rethinkdb_data/
 node_modules/
+*.swp

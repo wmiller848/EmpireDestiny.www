@@ -1,7 +1,9 @@
-www:
-  image: nginx:1.9.11
-  volumes:
-    - ./www/bin/dev:/usr/share/nginx/html:ro
+nginx:
+  image: nginx:1.9
   ports:
     - 80:80
     - 443:443
+  #volumes_from:
+    #- artifact
+  volumes:
+    - ./www/bin/dev:/opt/empire.www

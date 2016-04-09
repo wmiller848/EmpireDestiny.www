@@ -1,4 +1,2 @@
-www_build:
+artifact:
   build: ./
-  # volumes:
-  #   - ./bin:/opt/empire.www/bin

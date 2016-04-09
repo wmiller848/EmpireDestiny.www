@@ -1,5 +1,7 @@
 window.ED or= {}
 
+##
+##
 class window.ED.Card extends window.Malefic.Core
   ##
   ##

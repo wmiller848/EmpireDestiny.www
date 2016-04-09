@@ -18,6 +18,7 @@ var paths = {
   assets: {
     coffee: 'src/scripts/*.coffee',
     widgets: 'src/scripts/widgets/*.coffee',
+    models: '',
     html: 'src/*.html',
     templates: 'src/templates/*.tmpl',
     css: 'src/styles/*.css',
@@ -165,17 +166,20 @@ gulp.task('compile:release', ['compile:dev'], function() {
 //   }
 // });
 
-gulp.task('docker', function(cb) {
+gulp.task('docker', function(event) {
   var docker = process.spawn('./build.sh');
   docker.stdout.on('data', function(data) {
    console.log(data.toString());
   });
   docker.stdout.on('end', function() {
-    cb();
+  });
+
+  docker.on('exit',function(code) {
+    console.log('./build.sh - ' + code);
   });
 })
 
-gulp.task('watch', function() {
+gulp.task('watch', function(event) {
   gulp.watch([paths.assets.coffee, paths.assets.widgets, paths.assets.templates, paths.assets.html, paths.assets.css], ['docker']);
 });
 
